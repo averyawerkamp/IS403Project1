@@ -40,5 +40,9 @@ namespace Project_1.Controllers
         {
             return View();
         }
+        public ActionResult Proposal(int ProposalID)
+        {
+            return View();
+        }
     }
 }
