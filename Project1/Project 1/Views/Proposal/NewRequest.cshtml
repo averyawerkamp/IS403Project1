@@ -1,7 +1,64 @@
 ﻿
 @{
-    ViewBag.Title = "NewRequest";
+    ViewBag.Title = "New Request";
 }
 
-<h2>NewRequest</h2>
+<h2>New Project Request Form</h2>
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Please Enter the Following Information</h4>
+        <hr />
+           
+        <div class="form-group">
+            
+            <div class="col-md-10">
+                <p>
+                    @Html.Label("Date: ")
+                    @Html.TextBox("ProjectDate")
+                </p>
+            </div>
+            <div class="col-md-10">
+                <p>
+                    @Html.Label("Project Name: ")
+                    @Html.TextBox("ProjectName")
+                </p>
+            </div>
+            <div class="col-md-10">
+                <p>
+                    @Html.Label("Customer Name: ")
+                    @Html.TextBox("CustomerName")
+                </p>
+            </div>
+            <div class="col-md-10">
+                <p>
+                    @Html.Label("Customer Address: ")
+                    @Html.TextBox("CustomerAddress")
+                </p>
+            </div>
+            <div class="col-md-10">
+                <p>
+                    @Html.Label("Client Contact: ")
+                    @Html.TextBox("ClientContact")
+                </p>
+            </div>
+            <div class="col-md-10">
+                <p>
+                    <textarea rows="4" cols="50" id="textArea"></textarea>
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
 
