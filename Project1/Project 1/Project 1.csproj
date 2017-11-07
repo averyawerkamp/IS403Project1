@@ -262,7 +262,6 @@
     <Content Include="Views\Proposal\Index.cshtml" />
     <Content Include="Views\Proposal\NewRequest.cshtml" />
     <Content Include="Views\Proposal\Create.cshtml" />
-    <Content Include="Views\Proposal\Review.cshtml" />
     <Content Include="Views\Proposal\All.cshtml" />
     <Content Include="Views\Proposal\ViewProposal.cshtml" />
   </ItemGroup>

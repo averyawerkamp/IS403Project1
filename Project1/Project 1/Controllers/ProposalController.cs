@@ -6,15 +6,13 @@ using System.Web.Mvc;
 
 namespace Project_1.Controllers
 {
+    class Proposal
+    {
+        //variables here
+    }
     public class ProposalController : Controller
     {
-        // GET: Proposal
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
+        
         public ActionResult NewRequest()
         {
             return View();
@@ -26,20 +24,12 @@ namespace Project_1.Controllers
             return View();
         }
 
-        public ActionResult Review()
-        {
-            return View();
-        }
 
         public ActionResult All()
         {
             return View();
         }
 
-        public ActionResult ViewProposal()
-        {
-            return View();
-        }
         public ActionResult Proposal(int ProposalID)
         {
             return View();
