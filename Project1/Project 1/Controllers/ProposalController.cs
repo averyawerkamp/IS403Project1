@@ -9,6 +9,7 @@ namespace Project_1.Controllers
     public class ProposalController : Controller
     {
         // GET: Proposal
+
         public ActionResult Index()
         {
             return View();
