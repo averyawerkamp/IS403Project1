@@ -13,10 +13,6 @@ namespace Project_1
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "ViewProposal",
-                url: "{controller}/{action}/{ProposalID}"
-            );
 
             routes.MapRoute(
                 name: "Default",
