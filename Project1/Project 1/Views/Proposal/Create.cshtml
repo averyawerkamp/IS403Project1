@@ -5,3 +5,31 @@
 
 <h2>Create</h2>
 
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div id="pctConstruction">
+        <h3>Percent of Construction</h3>
+          <!--  <h4>Commercial Projects</h4>-->
+        <div class="field-heading">
+            @Html.Label("Consruction Sq Feet Cost:")
+            @Html.Editor("txt")
+        </div>
+        <div class="field-heading">
+            @Html.Label("Square Footage")
+            @Html.Editor("txt")
+        </div>
+        <div class="field-heading">
+            @Html.Label("% of Engineering Fee")
+            @Html.Editor("txt")
+        <div class="field-heading">
+            @Html.Label("Engineering Fee Based on Construction Cost")
+            @Html.Display("result")
+        </div>
+    </div>
+    
+    
+
+
+}
