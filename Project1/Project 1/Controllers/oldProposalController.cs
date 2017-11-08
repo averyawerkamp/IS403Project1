@@ -111,7 +111,7 @@ namespace Project_1.Controllers
         string RequestData;
     }
 
-    public class ProposalController : Controller
+    public class oldProposalController : Controller
     {
         
         public ActionResult NewRequest()
