@@ -6,23 +6,11 @@ using System.Web.Mvc;
 
 namespace Project_1.Controllers
 {
-    class Client
-    {
-        int clientID;
-        string ClientName;
-        string ContactName;
-        string ContactPhone;
-        string AddressLine1;
-        string AddressLine2;
-        string City;
-        string State;
-        string email;
-    }
 
     class Proposal
     {
         string ProjectName;
-        Client Client;
+        string Client;
     }
 
     class Proposal_details : Proposal
@@ -139,8 +127,12 @@ namespace Project_1.Controllers
             return View();
         }
 
-        public ActionResult Proposal(int ProposalID)
+        public ActionResult Proposal(int? ProposalID)
         {
+            if (ProposalID ==null)
+            {
+                return RedirectToAction("All");
+            }
             return View();
         }
     }
