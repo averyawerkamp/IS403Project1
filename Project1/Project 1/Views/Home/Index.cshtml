@@ -2,9 +2,10 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
+<div class="jumbotron" style="text-align:center">
     <h1>Babbitt Nelson Engineering</h1>
     <p class="lead"></p>
+    <img src="~/Content/Images/BNE-Logo-color.png" width="500"/> <br /><br />
     <p>@Html.ActionLink("Submit a proposal request","NewRequest","Proposal",null, new{@class="btn btn-primary btn-lg"})</p>
 </div>
 
@@ -17,13 +18,14 @@
         <p><a class="btn btn-default" href="~/Proposal/NewRequest">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Create Proposal</h2>
-        <p>If you want to bypass requesting a proposal, go here to submit all the necessary inforamtion about the project.</p>
-        <p><a class="btn btn-default" href="~/Proposal/Create">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
         <h2>View Proposal Status</h2>
         <p>Once your project has been started, check here to see what the current status of your project is!</p>
         <p><a class="btn btn-default" href="~/Proposal/ViewProposal">Learn more &raquo;</a></p>
     </div>
+    <div class="col-md-4">
+        <h2>Manage Clients</h2>
+        <p>View a list of all clients, and edit their information!</p>
+        <p><a class="btn btn-default" href="~/Proposal/Create">Learn more &raquo;</a></p>
+    </div>
+    
 </div>
