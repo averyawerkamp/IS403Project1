@@ -17,7 +17,7 @@ namespace Project_1.Models
         // GET: Clients
         public ActionResult Index()
         {
-            return View(db.Teams.ToList());
+            return View(db.Clients.ToList());
         }
 
         // GET: Clients/Details/5
@@ -27,7 +27,7 @@ namespace Project_1.Models
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Teams.Find(id);
+            Client client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace Project_1.Models
         {
             if (ModelState.IsValid)
             {
-                db.Teams.Add(client);
+                db.Clients.Add(client);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace Project_1.Models
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Teams.Find(id);
+            Client client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace Project_1.Models
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Teams.Find(id);
+            Client client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace Project_1.Models
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Client client = db.Teams.Find(id);
-            db.Teams.Remove(client);
+            Client client = db.Clients.Find(id);
+            db.Clients.Remove(client);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

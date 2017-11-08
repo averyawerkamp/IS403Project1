@@ -14,7 +14,7 @@ namespace Project_1.DAL
         {
 
         }
-        public DbSet<Client> Teams { get; set; }
+        public DbSet<Client> Clients { get; set; }
 
     }
 }
