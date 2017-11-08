@@ -130,9 +130,9 @@ namespace Project_1.Controllers
             return View();
         }
 
-        public ActionResult Proposal(int? ProposalID)
+        public ActionResult Proposal(int? ID)
         {
-            if (ProposalID ==null)
+            if (ID ==null)
             {
                 return RedirectToAction("All");
             }

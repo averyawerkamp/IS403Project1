@@ -10,7 +10,7 @@ namespace Project_1.DAL
 {
     public class BabbittNelsonContext : DbContext
     {
-        public BabbittNelsonContext() : base("BabbittNelson")
+        public BabbittNelsonContext() : base("DefaultConnection")
         {
 
         }
