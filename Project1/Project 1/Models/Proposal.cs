@@ -65,18 +65,19 @@ namespace Project_1.Models
        public double DraftingHourlyRate { get; set; }
         public double EngineeringHourlyRate { get; set; } 
         //public double DraftingEstimatedFee {get;set;}         // CALCULATED DraftingHours * DraftingHourlyRate
-         
+         //public double EngineeringEstimatedFee {get;set;}          //CALCULATED EngineeringHours * EnginerringHourlyRate
+
         public double PlanCheckComments { get; set; }
         public double ShopDrawingReview { get; set; }
         public double ConstructionAdmin_RFI { get; set; }
 
-        public int SpecialInspections { get; set; }
+        public int SpecialInspections { get; set; }                  //hour count
         public double SpecialInspectionsRate { get; set; }
 
-        public double FeeSheets { get; set; }                //TOTAL  SUM(
+        public double FeeSheets { get; set; }                //TOTAL  DraftingEstimatedFee + EngineeringEstimatedFee
 
         //Fee on Man hours
-        public int GSNHours { get; set; }
+        public int GSNHours { get; set; }                         
         public int TypicalDetailsHours { get; set; }
         public int FoundationPlansHours { get; set; }
         public int FloorFramingHours { get; set; }
