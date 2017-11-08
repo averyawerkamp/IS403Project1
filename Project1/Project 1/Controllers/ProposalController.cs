@@ -10,7 +10,7 @@ namespace Project_1.Controllers
     class Proposal
     {
         string ProjectName;
-        string Client;
+        int ClientID;
     }
 
     class Proposal_details : Proposal
@@ -30,6 +30,9 @@ namespace Project_1.Controllers
         int ApproverID;
         DateTime ApprovedOn;
         int ProposalID;
+
+        enum Status { Request, WaitingApproval, Approved, Accepted };
+        Status CurrentStatus;
 
         //Client and ProjectName Inherited From parent
 
