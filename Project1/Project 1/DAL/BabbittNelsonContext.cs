@@ -16,6 +16,7 @@ namespace Project_1.DAL
         }
         public DbSet<Proposal> Proposals { get; set; }
         public DbSet<Client> Clients { get; set; }
-        
+        public DbSet<Request> Requests { get; set; }
+
     }
 }
