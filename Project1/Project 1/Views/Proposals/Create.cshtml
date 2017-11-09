@@ -18,7 +18,7 @@
         
         <div id="GeneralInfo" class ="row">
             
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <h4>General Information</h4>
                 <div class="form-group">
                     @Html.LabelFor(model => model.ProjectName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -92,13 +92,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 hello 
             </div>
             </div>
             
         <br />
         <div id="PctConstructionCost" class=" row">
+            <div class="col-md-8">
             <h4>% Construction Cost and Square Footage</h4>
             <div class="form-group">
                 @Html.LabelFor(model => model.SqFtCost, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -155,9 +156,15 @@
                     @Html.ValidationMessageFor(model => model.ConstructionCost, "", new { @class = "text-danger" })
                 </div>
             </div>
+                
+            </div>
+            <div class="col-md-4">
+                hello
+            </div>
         </div>
         <br />
-        <div id="NumSheetsAndManHours">
+        <div id="NumSheetsAndManHours" class="row">
+            <div class="col-md-8">
             <h4>Number of Sheets and Man Hours</h4>
             <div class="form-group">
                 @Html.LabelFor(model => model.GSN, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -374,13 +381,18 @@
                     @Html.ValidationMessageFor(model => model.FramingDetailsHours, "", new { @class = "text-danger" })
                 </div>
             </div>
+                </div>
+                <div class="col-md-4">
+                    hello
+                </div>
         </div>
         <br />
-        <div id="NumberofUnits">
+        <div id="NumberofUnits" class="row">
+            <div class="col-md-8">
             <h4>Number of Units</h4>
             <div class="form-group">
                 @Html.LabelFor(model => model.NumUnits, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
+                <div class="col-md-8">
                     @Html.EditorFor(model => model.NumUnits, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.NumUnits, "", new { @class = "text-danger" })
                 </div>
@@ -441,9 +453,14 @@
                     @Html.ValidationMessageFor(model => model.FeeNumUnits, "", new { @class = "text-danger" })
                 </div>
             </div>
+                </div>
+                <div class="col-md-4">
+                    hello
+                </div>
         </div>
         <br />
-        <div id="TotalCalc">
+        <div id="TotalCalc" class="row">
+            <div class="col-md-8">
             <h4>Total Calculation</h4>
             <div class="form-group">
                 @Html.LabelFor(model => model.FeeAverage, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -500,6 +517,10 @@
                     @Html.ValidationMessageFor(model => model.DraftingFee, "", new { @class = "text-danger" })
                 </div>
             </div>
+                </div>
+                <div class="col-md-4">
+                    hello
+                </div>
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
