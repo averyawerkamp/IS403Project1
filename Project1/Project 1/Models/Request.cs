@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace Project_1.Models
         public int RequestID { get; set; }
         public int RequestedByID { get; set; }
         public DateTime RequestDate { get; set; }
+        [DisplayName("Client")]
         public int ClientID { get; set; }
         public string ProjectName { get; set; }
         public string RequestDesc { get; set; }
