@@ -3,4 +3,12 @@
     color: #999999;
     padding:5px;
 }
-.body-content{margin-top:20px;}
+.body-content
+{
+    margin-top:20px;
+
+}
+#RequestDesc {
+    min-width: 100%;
+    min-height: 300px;
+}
