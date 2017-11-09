@@ -16,7 +16,9 @@ namespace Project_1.Models
         
         [Key]
         public int ProposalID { get; set; }
+        [DisplayName("Project Name")]
         public string ProjectName { get; set; }
+        [DisplayName("Client ID")]
         public int ClientID { get; set; }
 
         //public static int MinFeeOneTime { get; set; }
@@ -28,6 +30,7 @@ namespace Project_1.Models
 
         //admin fields
         public int RequestByID { get; set; }
+        [DisplayName("Date Requested")]
         public DateTime DateRequested { get; set; }
         public int CreatedByID { get; set; }
         public DateTime DateCreated { get; set; }
