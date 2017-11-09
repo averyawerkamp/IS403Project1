@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,22 +8,23 @@ using System.Web;
 
 namespace Project_1.Models
 {
+    public enum Status { Request, WaitingApproval, Approved, Accepted };
 
     [Table("Proposal")]
     public class Proposal
     {
         
         [Key]
-         public int ProposalID { get; set; }
-         public string ProjectName { get; set; }
+        public int ProposalID { get; set; }
+        public string ProjectName { get; set; }
         public int ClientID { get; set; }
 
-        public static int MinFeeOneTime { get; set; }
-        public static int MinFeeRegular { get; set; }
+        //public static int MinFeeOneTime { get; set; }
+        //public static int MinFeeRegular { get; set; }
 
         //% of fee that is for engineering and for drafting, used for calculations
-        public static double DraftingFeePortion { get; set; }
-        public static double EngineeringFeePortion { get; set; }
+        //public static double DraftingFeePortion { get; set; }
+        //public static double EngineeringFeePortion { get; set; }
 
         //admin fields
         public int RequestByID { get; set; }
@@ -30,10 +32,8 @@ namespace Project_1.Models
         public int CreatedByID { get; set; }
         public DateTime DateCreated { get; set; }
         public int ApproverID { get; set; }
-        public DateTime ApprovedOn { get; set; }
-
-
-        public enum Status { Request, WaitingApproval, Approved, Accepted };
+        public DateTime ApprovedDate { get; set; }
+                
         public Status CurrentStatus { get; set; }
 
         //Client and ProjectName Inherited From parent

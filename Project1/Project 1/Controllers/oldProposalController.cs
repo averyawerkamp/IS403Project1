@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace Project_1.Controllers
 {
 
-    class Proposal
+    /*class Proposal
     {
         string ProjectName;
         int ClientID;
@@ -138,5 +138,5 @@ namespace Project_1.Controllers
             }
             return View();
         }
-    }
+    }*/
 }

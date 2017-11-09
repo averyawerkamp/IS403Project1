@@ -1,0 +1,482 @@
+﻿@model Project_1.Models.Proposal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Proposal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestByID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestByID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRequested)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRequested)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedByID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedByID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApproverID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApproverID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SqFtCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SqFtCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SqFootage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SqFootage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineeringFeePercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineeringFeePercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineeringFeePerSqFt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineeringFeePerSqFt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeeSqFt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeeSqFt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeePercentConstruction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeePercentConstruction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConstructionCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConstructionCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GSN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GSN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypicalDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypicalDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FoundationPlans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoundationPlans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FloorFraming)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FloorFraming)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoofFraming)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoofFraming)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WallPanelElevation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WallPanelElevation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SheerWallPlans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SheerWallPlans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FoundationDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoundationDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FramingDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FramingDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstHoursPerSheet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstHoursPerSheet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DraftingHourlyRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DraftingHourlyRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineeringHourlyRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineeringHourlyRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanCheckComments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanCheckComments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShopDrawingReview)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShopDrawingReview)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConstructionAdmin_RFI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConstructionAdmin_RFI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialInspections)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialInspections)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialInspectionsRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialInspectionsRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeeSheets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeeSheets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GSNHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GSNHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypicalDetailsHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypicalDetailsHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FoundationPlansHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoundationPlansHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FloorFramingHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FloorFramingHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoofFramingHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoofFramingHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WallPanelElevationHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WallPanelElevationHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SheerWallPlansHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SheerWallPlansHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FoundationDetailsHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoundationDetailsHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FramingDetailsHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FramingDetailsHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumUnits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostPerUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostPerUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommunityServiceArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommunityServiceArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerSqFt_CommunityServiceArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerSqFt_CommunityServiceArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommunityServiceFees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommunityServiceFees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RetainingWallsAndMiscFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RetainingWallsAndMiscFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoteOnMiscFees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoteOnMiscFees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeeNumUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeeNumUnits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeeAverage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeeAverage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfFeesInCalc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfFeesInCalc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineeringEst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineeringEst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DraftingEst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DraftingEst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineeringFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineeringFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DraftingFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DraftingFee)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProposalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

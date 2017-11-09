@@ -192,7 +192,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\oldProposalController.cs" />
+    <Compile Include="Controllers\ProposalsController.cs" />
     <Compile Include="DAL\BabbittNelsonContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -263,15 +263,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Proposal\NewRequest.cshtml" />
-    <Content Include="Views\Proposal\Create.cshtml" />
-    <Content Include="Views\Proposal\All.cshtml" />
-    <Content Include="Views\Proposal\Proposal.cshtml" />
     <Content Include="Views\Clients\Create.cshtml" />
     <Content Include="Views\Clients\Delete.cshtml" />
     <Content Include="Views\Clients\Details.cshtml" />
     <Content Include="Views\Clients\Edit.cshtml" />
     <Content Include="Views\Clients\Index.cshtml" />
+    <Content Include="Views\Proposals\Create.cshtml" />
+    <Content Include="Views\Proposals\Delete.cshtml" />
+    <Content Include="Views\Proposals\Details.cshtml" />
+    <Content Include="Views\Proposals\Edit.cshtml" />
+    <Content Include="Views\Proposals\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
