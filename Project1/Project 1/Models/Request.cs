@@ -15,8 +15,8 @@ namespace Project_1.Models
         public int RequestedByID { get; set; }
         public DateTime RequestDate { get; set; }
         public string ProjectName { get; set; }
-        public int ClientID { get; set; }
         public string RequestDesc { get; set; }
+
 
     }
 }

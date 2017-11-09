@@ -18,6 +18,7 @@ namespace Project_1.Controllers
         // GET: Requests
         public ActionResult Index()
         {
+
             return View(db.Requests.ToList());
         }
 
@@ -39,7 +40,9 @@ namespace Project_1.Controllers
         // GET: Requests/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new RequestAndClients();
+            model.Clients = db.Clients.ToList();
+            return View(model);
         }
 
         // POST: Requests/Create
@@ -57,8 +60,10 @@ namespace Project_1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(request);
+            var model = new RequestAndClients();
+            model.Request = request;
+            model.Clients = db.Clients.ToList();
+            return View(model);
         }
 
         // GET: Requests/Edit/5
