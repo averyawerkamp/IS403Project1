@@ -25,7 +25,13 @@ namespace Project_1.Models
         public String AddressLine2 { get; set; }
         public String City { get; set; }
         public String State { get; set; }
-        public String Email { get; set; }
+        public String Email { get; set; }         
+            
+            
+        public virtual IEnumerable<Request> Requests { get; set; }
+
+
+
 
     }
 }
