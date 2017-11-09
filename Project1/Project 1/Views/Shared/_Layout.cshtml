@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - Babbitt Nelson Engineering</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @Styles.Render("~/Content/CustomeStyle.css")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -25,13 +25,28 @@
                     <li>@Html.ActionLink("Requests", "Index", "Requests")</li>
                     <li>@Html.ActionLink("Proposals", "Index", "Proposals")</li>
                     <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
-                    
-
                 </ul>
                 @Html.Partial("_LoginPartial") 
             </div>
+            <div class="breadcrumbs">
+                @if (ViewContext.RouteData.Values["controller"].ToString() == "Home")
+            {
+                    @Html.Label(ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["controller"].ToString())
+                }
+
+                @if (ViewContext.RouteData.Values["controller"].ToString() != "Home")
+            {
+                    @:Home > @Html.Label(ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["controller"].ToString())
+                    if (ViewContext.RouteData.Values["action"].ToString() != "Index")
+                {
+                        @:> @Html.Label(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString())
+	            }
+            }
+            </div>
+
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
