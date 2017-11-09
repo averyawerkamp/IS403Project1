@@ -18,7 +18,7 @@
         
         <div id="GeneralInfo" class ="row">
             
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <h3>General Information</h3>
                 <div class="form-group">
                     @Html.LabelFor(model => model.ProjectName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -29,9 +29,9 @@
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.ClientID, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.LabelFor(model => model.ClientID,"ClientID", htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.ClientID, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.DropDownList("ClientID", null, htmlAttributes: new { @class = "form-control"})
                         @Html.ValidationMessageFor(model => model.ClientID, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -92,8 +92,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                hello 
+            <div class="col-md-6">
+                <h5>Commercial Projects</h5>
+                <p>12.5% to 15% of Architect's Fee:</p>
+                <p>
+                    A. Architectural Fees will be 5% of Construction cost (Structural
+                    fees will be .63 to .75%, including shop drawings).<br />
+                    B. Architectural fee will be 8% - 10% for Hospitals, Hi-Tech 
+                Facilities, Banks (structural fees will be 1.0 to 1.5%)<br />
+                    C. For parking garages, structural fee is 0.75 - 1.25% for 
+                    pre-cast, 1.00 - 1.5% for post-tension construction
+                </p>
+                <h5>Government Projects</h5>
+                <p>12.5% to 15% of Architect's Fee:</p>
+                <p>
+                    A. Architectural Fees will be 6% of Construction cost (Structural fees will be .75 to .9%, including shop drawings).<br />
+                    B. On Federal Jobs Architectural fee will be 2% for preliminary studies and design, 6% for construction documents
+                </p>
+                <p>
+                    Always check for square footage cost to see if budget is appropriate (Sometimes Architects will give shell cost only). For jobs under $500,000, use 1% of construction cost.
+                </p>
+
             </div>
             </div>
             

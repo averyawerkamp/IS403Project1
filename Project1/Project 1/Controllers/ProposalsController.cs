@@ -39,6 +39,8 @@ namespace Project_1.Controllers
         // GET: Proposals/Create
         public ActionResult Create()
         {
+            ViewBag.ClientID = new SelectList(db.Clients, "ClientID", "ClientName");
+
             return View();
         }
 
@@ -56,6 +58,8 @@ namespace Project_1.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ClientID = new SelectList(db.Clients, "ClientID", "ClientName", proposal.ClientID);
+
             return View(proposal);
         }
 
@@ -71,6 +75,7 @@ namespace Project_1.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ClientID = new SelectList(db.Clients, "ClientID", "ClientName", proposal.ClientID);
             return View(proposal);
         }
 
@@ -87,6 +92,7 @@ namespace Project_1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ClientID = new SelectList(db.Clients, "ClientID", "ClientName", proposal.ClientID);
             return View(proposal);
         }
 

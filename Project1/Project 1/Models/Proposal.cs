@@ -18,8 +18,9 @@ namespace Project_1.Models
         public int ProposalID { get; set; }
         [DisplayName("Project Name")]
         public string ProjectName { get; set; }
-        [DisplayName("Client ID")]
+        [DisplayName("Client")]
         public int ClientID { get; set; }
+        public virtual Client Client { get; set; }
 
         //public static int MinFeeOneTime { get; set; }
         //public static int MinFeeRegular { get; set; }
