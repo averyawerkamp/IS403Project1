@@ -32,11 +32,15 @@ namespace Project_1.Models
         public int RequestByID { get; set; }
         [DisplayName("Date Requested")]
         public DateTime DateRequested { get; set; }
+        [DisplayName("Created By ID")]
         public int CreatedByID { get; set; }
+        [DisplayName("Date Created")]
         public DateTime DateCreated { get; set; }
+        [DisplayName("Approver ID")]
         public int ApproverID { get; set; }
+        [DisplayName("Date Approved")]
         public DateTime ApprovedDate { get; set; }
-                
+        [DisplayName("Current Status")]
         public Status CurrentStatus { get; set; }
 
         //Client and ProjectName Inherited From parent
@@ -102,13 +106,18 @@ namespace Project_1.Models
 
 
         //SummaryFields
+        [DisplayName("Estimated Total Fee")]
         public double FeeAverage { get; set; }
         public int NumOfFeesInCalc { get; set; }
         public double EngineeringEst { get; set; }
         public double DraftingEst { get; set; }
 
+
+        [DisplayName("Contract Amount")]
         public double ContractAmount { get; set; }
+        [DisplayName("Engineering Fee")]
         public double EngineeringFee { get; set; }
+        [DisplayName("Drafting Fee")]
         public double DraftingFee { get; set; }
 
 
