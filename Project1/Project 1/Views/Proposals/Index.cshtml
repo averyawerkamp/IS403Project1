@@ -164,9 +164,7 @@
         @*<th>
             @Html.DisplayNameFor(model => model.FeeNumUnits)
         </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.FeeAverage)
-        </th>
+        
         @*<th>
             @Html.DisplayNameFor(model => model.NumOfFeesInCalc)
         </th>
@@ -176,14 +174,18 @@
         <th>
             @Html.DisplayNameFor(model => model.DraftingEst)
         </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.ContractAmount)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.EngineeringFee)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DraftingFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeeAverage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractAmount)
         </th>
         <th></th>
     </tr>
@@ -343,9 +345,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.FeeNumUnits)
         </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.FeeAverage)
-        </td>
+        
         @*<td>
             @Html.DisplayFor(modelItem => item.NumOfFeesInCalc)
         </td>
@@ -355,14 +355,19 @@
         <td>
             @Html.DisplayFor(modelItem => item.DraftingEst)
         </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.ContractAmount)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.EngineeringFee)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DraftingFee)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.FeeAverage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractAmount)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ProposalID }) |
