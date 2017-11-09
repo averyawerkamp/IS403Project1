@@ -29,7 +29,7 @@ namespace Project_1.Models
             
             
         public virtual IEnumerable<Request> Requests { get; set; }
-
+        public virtual IEnumerable<Proposal> Proposals { get; set; }
 
 
 
