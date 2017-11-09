@@ -7,8 +7,9 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Project_1.DAL;
+using Project_1.Models;
 
-namespace Project_1.Models
+namespace Project_1.Controllers
 {
     public class ClientsController : Controller
     {

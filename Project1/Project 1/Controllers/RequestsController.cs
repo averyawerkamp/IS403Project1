@@ -18,7 +18,8 @@ namespace Project_1.Controllers
         // GET: Requests
         public ActionResult Index()
         {
-            return View(db.Requests.ToList());
+            var requests = db.Requests.Include(r => r.Client);
+            return View(requests.ToList());
         }
 
         // GET: Requests/Details/5
@@ -39,6 +40,7 @@ namespace Project_1.Controllers
         // GET: Requests/Create
         public ActionResult Create()
         {
+            ViewBag.ClientID = new SelectList(db.Clients, "ClientID", "ClientName");
             return View();
         }
 
@@ -47,10 +49,9 @@ namespace Project_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RequestID,RequestedByID,ProjectName,ClientID,RequestDesc")] Request request)
+        public ActionResult Create([Bind(Include = "RequestID,RequestedByID,RequestDate,ClientID,ProjectName,RequestDesc")] Request request)
         {
             request.RequestDate = DateTime.Now;
-
             if (ModelState.IsValid)
             {
                 db.Requests.Add(request);
@@ -58,6 +59,7 @@ namespace Project_1.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ClientID = new SelectList(db.Clients, "ClientID", "ClientName", request.ClientID);
             return View(request);
         }
 
@@ -73,6 +75,7 @@ namespace Project_1.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ClientID = new SelectList(db.Clients, "ClientID", "ClientName", request.ClientID);
             return View(request);
         }
 
@@ -81,7 +84,7 @@ namespace Project_1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RequestID,RequestedByID,RequestDate,ProjectName,ClientID,RequestDesc")] Request request)
+        public ActionResult Edit([Bind(Include = "RequestID,RequestedByID,RequestDate,ClientID,ProjectName,RequestDesc")] Request request)
         {
             if (ModelState.IsValid)
             {
@@ -89,6 +92,7 @@ namespace Project_1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ClientID = new SelectList(db.Clients, "ClientID", "ClientName", request.ClientID);
             return View(request);
         }
 
