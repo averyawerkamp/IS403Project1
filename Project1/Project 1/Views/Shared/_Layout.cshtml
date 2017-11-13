@@ -28,6 +28,7 @@
                 </ul>
                 @Html.Partial("_LoginPartial") 
             </div>
+
             <div class="breadcrumbs">
                 @if (ViewContext.RouteData.Values["controller"].ToString() == "Home")
             {
@@ -35,10 +36,12 @@
                 }
 
                 @if (ViewContext.RouteData.Values["controller"].ToString() != "Home")
-            {
-                    @:Home > @Html.Label(ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["controller"].ToString())
-                    if (ViewContext.RouteData.Values["action"].ToString() != "Index")
                 {
+                    @Html.ActionLink("Home", "Index", "Home") 
+                    @:> 
+                    @Html.ActionLink(ViewContext.RouteData.Values["controller"].ToString(), "Index", ViewContext.RouteData.Values["controller"].ToString())
+                    if (ViewContext.RouteData.Values["action"].ToString() != "Index")
+                    {
                         @:> @Html.Label(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString())
 	            }
             }

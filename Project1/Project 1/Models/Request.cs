@@ -18,7 +18,7 @@ namespace Project_1.Models
         public int RequestedByID { get; set; }
         [DisplayName("Request Date")]
         public DateTime RequestDate { get; set; }
-        [DisplayName("Client")]
+            [DisplayName("Client")]
         public int ClientID { get; set; }
         [DisplayName("Project Name")]
         public string ProjectName { get; set; }
