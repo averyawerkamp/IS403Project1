@@ -30,6 +30,7 @@ namespace Project_1.Models
         //public static double EngineeringFeePortion { get; set; }
 
         //admin fields
+        [DisplayName("Request By ID")]
         public int RequestByID { get; set; }
         [DisplayName("Date Requested")]
         public DateTime DateRequested { get; set; }
