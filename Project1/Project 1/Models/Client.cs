@@ -13,6 +13,7 @@ namespace Project_1.Models
     {
         [Key]
         public int ClientID { get; set; }
+        [Required]
         [DisplayName("Client Name")]
         public String ClientName { get; set; }
         [DisplayName("Contact Name")]
