@@ -11,6 +11,7 @@ using Project_1.Models;
 
 namespace Project_1.Controllers
 {
+    [Authorize]
     public class ClientsController : Controller
     {
         private BabbittNelsonContext db = new BabbittNelsonContext();
@@ -18,6 +19,7 @@ namespace Project_1.Controllers
         // GET: Clients
         public ActionResult Index()
         {
+            //sends a list of clients to controller
             return View(db.Clients.ToList());
         }
 
