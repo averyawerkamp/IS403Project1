@@ -60,8 +60,8 @@ namespace Project_1
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "",
-                ClientSecret = ""
+                ClientId = "979581468167-lfmkpc59n39slolj4hcte5sp17n2em99.apps.googleusercontent.com",
+                ClientSecret = "QufE6tWo4TVrdqKRt7mc_P4-"
             });
         }
     }
