@@ -11,6 +11,7 @@ using Project_1.Models;
 
 namespace Project_1.Controllers
 {
+    [Authorize]
     public class ProposalsController : Controller
     {
         private BabbittNelsonContext db = new BabbittNelsonContext();
